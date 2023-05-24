@@ -11,8 +11,9 @@
     transition: all .2s linear;
 }
 
+/* STYLE MENU STARTS */
 body{
-    height: 100vh;
+    height: 70vh;
     background-color: #000;
     background-image: url(../assets/images/obelisco.jpg);
     background-size: cover;
@@ -145,7 +146,7 @@ section#hero{
 
 /* h1 color */
 h1{
-    color: rgba(red, green, blue);
+    color: #fff;
 }
 
 /* footer color */
@@ -153,6 +154,9 @@ footer h4{
     color: antiquewhite;
     background-color: rgb(rgb(150, 104, 104), green, blue)
 }
+
+/* STYLE MENU ENDS */
+
 
 /* RESPONSIVE */
 @media (max-width: 992px){
