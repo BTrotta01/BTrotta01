@@ -29,10 +29,10 @@
         </div>
     
         <div class="dropdown_menu">
-           <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./pages/about.html">Nosotros</a></li>
-            <li><a href="./pages/services.html">Servicios</a></li>
-            <li><a href="./pages/vehicles.html">Flota</a></li>
+           <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./about.html">Nosotros</a></li>
+            <li><a href="./services.html">Servicios</a></li>
+            <li><a href="./vehicles.html">Flota</a></li>
             <li><a href="https://wa.link/t8ac1i">Contacto</a></li>
             <li> <a href="https://wa.link/t8ac1i" class="action_btn">Contacto</a></li>
         </div>
@@ -63,6 +63,21 @@
     </div>
 
   </main>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+  
+    toggleBtn.onclick= function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+  
+      toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+  </script>
 
    <footer class="social">
     <h4>Social</h4>
