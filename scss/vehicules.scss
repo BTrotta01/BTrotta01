@@ -1,0 +1,176 @@
+$color_1: #fff;
+$color_2: aquamarine;
+$color_3: antiquewhite;
+$color_4: rgba(red, green, blue);
+$font-family_1: 'Poppins', sans-serif;
+$background-color_1: #000;
+$background-color_2: #b7b4c7;
+$background-color_3: rgb(rgb(150, 104, 104), green, blue);
+
+/* Import font */
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;700&display=swap";
+/* STYLE MENU STARTS */
+/*HEADER*/
+/* MENU RESPONSIVE */
+/* HERO */
+/* h1 size */
+/* h1 color */
+/* footer color */
+/* STYLE MENU ENDS */
+/* RESPONSIVE */
+* {
+	font-family: $font-family_1;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all .2s linear;
+}
+body {
+	height: 100vh;
+	background-color: $background-color_1;
+	background-image: url(../assets/images/obelisco.jpg);
+	background-size: cover;
+	background-position: center;
+}
+li {
+	list-style: none;
+}
+a {
+	background-color: $background-color_2;
+	color: $color_1;
+	padding: 0.5rem 1rem;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: scale 0.2 ease;
+	&:hover {
+		color: $color_2;
+	}
+}
+header {
+	position: relative;
+	padding: 0 4rem;
+}
+.navbar {
+	width: 100%;
+	height: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.logo {
+		a {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+	}
+	.links {
+		display: flex;
+		gap: 2rem;
+	}
+	.toggle_btn {
+		color: $color_1;
+		font-size: 1.5rem;
+		cursor: pointer;
+		display: none;
+	}
+}
+.action_btn {
+	background-color: $background-color_2;
+	color: $color_1;
+	padding: 0.5rem 1rem;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: scale 0.2 ease;
+	&:hover {
+		scale: 1.05;
+		color: $color_1;
+	}
+	&:active {
+		scale: 0.95;
+	}
+}
+.dropdown_menu {
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	height: 0;
+	width: 300px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	li {
+		padding: 0.7rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.action_btn {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+}
+.dropdown_menu.open {
+	height: 240px;
+}
+section#hero {
+	height: calc(100vh - 60px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: $color_3;
+}
+#hero {
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+}
+h1 {
+	color: $color_4;
+}
+footer {
+	h4 {
+		color: $color_3;
+		background-color: $background-color_3;
+	}
+}
+@media (max-width: 992px) {
+	.navbar {
+		.links {
+			display: none;
+		}
+		.action_btn {
+			display: none;
+		}
+		.toggle_btn {
+			display: block;
+		}
+	}
+	.dropdown_menu {
+		display: block;
+	}
+}
+@media (max-width: 576px) {
+	.dropdown_menu {
+		left: 2rem;
+		width: unset;
+	}
+}
